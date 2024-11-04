@@ -1,0 +1,9 @@
+.app{
+  height: 100vh;
+}
+.app.dark {
+  text-align: center;
+  height: 100vh;
+  background-color: black;
+  color: white;
+}
