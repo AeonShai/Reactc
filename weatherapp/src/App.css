@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+  font-family: 'Arial', sans-serif; /* Modern bir yazı tipi ekledik */
+  background-color: gray; /* Arka plan rengi */
+  padding: 20px; /* Genel padding ekledik */
+  min-height: 100vh; /* Tam yükseklik ayarı */
+}
+
+.RegionName {
+  font-size: 28px; /* Başlık boyutu artırıldı */
+  font-weight: bold; /* Kalın yazı */
+  margin: 20px 0; /* Üst ve alt boşluk */
+  color: #333; /* Başlık rengi */
+}
+
+.Weather {
+  display: flex;
+  flex-wrap: wrap; /* Kutuların birden fazla satıra geçmesini sağlar */
+  gap: 16px; /* Kutular arasındaki boşluk */
+  justify-content: center; /* Kutuları ortala */
+  margin-top: 150px; /* Üstten boşluk ekledik */
+}
+
+.weather-box {
+  background-color: white; /* Beyaz arka plan */
+  border-radius: 16px; /* Kenar yuvarlama */
+  padding: 20px;
+  width: 200px; /* Kutuların genişliği */
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1); /* Daha belirgin gölge */
+  transition: transform 0.2s; /* Geçiş efekti */
+  text-align: center; /* Metni ortala */
+}
+
+.weather-box:hover {
+  transform: translateY(-10px); /* Hover efekt */
+}
+
+.Countries {
+  position: relative; /* Ana kapsayıcı */
+  margin-bottom: 10px; /* Alt boşluk */
+}
+
+.Cities {
+  position: absolute; /* Alt kapsayıcı */
+  top: 60px; /* Yukarıdan aşağıya olan mesafe */
+  right: 0; /* Sağdan konum */
+  display: flex;
+  gap: 10px; /* Şehir seçimleri arasındaki boşluk */
+}
+
+.small-select {
+  position: absolute;
+  top: 10px; /* Üstten boşluk */
+  right: 10px; /* Sağdan boşluk */
+  width: auto; /* İçeriğe göre genişlik */
+  min-width: 100px; /* Minimum genişlik */
+  max-width: 180px; /* Maksimum genişlik */
+  height: 40px; /* Yükseklik */
+  font-size: 14px; /* Yazı tipi boyutu */
+  padding: 8px; /* İç boşluk */
+  border-radius: 5px; /* Kenar yuvarlama */
+  background-color: #ffffff; /* Arka plan rengi */
+  border: 1px solid #ccc; /* Kenar rengi */
+  cursor: pointer; /* İmleç değişimi */
+  transition: border-color 0.2s; /* Kenar rengi geçiş efekti */
+}
+
+.small-select:hover {
+  border-color: #888; /* Hover sırasında kenar rengi değişimi */
+}
+
+/* Responsive tasarım için medya sorguları */
+@media (max-width: 600px) {
+  .Weather {
+    flex-direction: column; /* Küçük ekranlarda dikey düzen */
+    align-items: center; /* Ortala */
+  }
+
+  .weather-box {
+    width: 90%; /* Kutuların genişliğini artır */
+  }
+
+  .small-select {
+    width: 90%; /* Seçim kutusunun genişliğini artır */
+    top: 0; /* Üstten boşluk */
+    right: 0; /* Sağdan boşluk */
+    margin: 10px auto; /* Ortalamak için otomatik marj */
+  }
+}
